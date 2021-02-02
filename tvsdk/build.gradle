@@ -5,8 +5,8 @@ def build = depends.build
 def support = depends.support
 def test = depends.test
 
-def version_code = 000002
-def version_name = "0.0.2"
+def version_code = 000003
+def version_name = "0.0.3"
 
 def USER = "zhangkari"
 def GROUP = "com.class100.tvsdk"
@@ -50,8 +50,8 @@ android {
 dependencies {
     implementation support.appcompat
     implementation 'com.tencent.tbs.tbssdk:sdk:43939'
-    api "com.class100.atropos:atropos:0.0.1"
-    api "com.class100.hades:hades:0.0.1"
+    api "com.class100.atropos:atropos:0.0.5"
+    api "com.class100.hades:hades:0.0.2"
     api "com.class100.khaos:khaos:0.0.1"
     api "com.class100.muses:muses:0.0.1"
     api "com.class100.oceanides:oceanides:0.0.1"
