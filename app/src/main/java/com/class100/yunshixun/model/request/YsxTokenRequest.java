@@ -22,9 +22,8 @@ public class YsxTokenRequest extends YsxApiRequest {
     }
 
     @Override
-    protected Map<String, String> buildParameters(Map<String, String> map) {
+    protected void buildParams(Map<String, String> map) {
         map.put("mobile", mobile);
         map.put("password", password);
-        return map;
     }
 }
