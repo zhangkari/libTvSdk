@@ -1,6 +1,6 @@
 package com.class100.yunshixun.model.request;
 
-import com.class100.hades.http.YsxApiRequest;
+import com.class100.hades.http.ysx.YsxApiRequest;
 
 import java.util.Map;
 
