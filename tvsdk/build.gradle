@@ -1,5 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.novoda.bintray-release'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 def build = depends.build
 def support = depends.support
@@ -22,8 +24,8 @@ android {
     defaultConfig {
         minSdkVersion build.minSdkVersion
         targetSdkVersion build.compileSdkVersion
-        versionCode version_code
-        versionName version_name
+        versionCode VCode
+        versionName VName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"

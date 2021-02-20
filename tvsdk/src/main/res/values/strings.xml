@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ts_prepare_battery">请安装好电池</string>
+    <string name="ts_prepare_battery_hint">如电池仓有绝缘片请取出</string>
+    <string name="ts_controller_guide">请对准电视盒子按住遥控器上确定键和音量上键以配对遥控器</string>
+</resources>

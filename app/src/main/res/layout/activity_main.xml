@@ -4,10 +4,16 @@
     android:layout_height="match_parent"
     android:gravity="center">
 
-    <TextView
+    <Button
+        android:id="@+id/tv_welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:textColor="@android:color/black" />
-
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
+        android:focusable="true"
+        android:padding="16dp"
+        android:text="Welcome"
+        android:textAllCaps="false"
+        android:textColor="#f1f1f1"
+        android:textSize="30sp" />
 </LinearLayout>
