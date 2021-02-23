@@ -4,6 +4,6 @@
     <style name="WelcomeActivityTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowActionBar">false</item>
         <item name="android:windowFullscreen">true</item>
-        <item name="android:windowBackground">@drawable/ts_app_bg</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
     </style>
 </resources>

@@ -5,6 +5,7 @@ import androidx.viewpager.widget.ViewPager
 import com.class100.oceanides.OcActivity
 import com.class100.tvsdk.R
 import com.class100.tvsdk.exts.gotoWifiSetting
+import com.class100.tvsdk.exts.isWifiConnected
 
 open class WelcomeActivity : OcActivity() {
     private val viewPager = lazy {
@@ -51,7 +52,9 @@ open class WelcomeActivity : OcActivity() {
     }
 
     protected open fun arriveLastGuidePage() {
-        gotoWifiSetting()
+        if (!isWifiConnected()) {
+            gotoWifiSetting()
+        }
         finish()
     }
 }
