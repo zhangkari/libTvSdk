@@ -38,6 +38,12 @@ android {
         }
     }
 
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
     publish {
         userOrg = USER
         groupId = GROUP
@@ -50,14 +56,18 @@ android {
 }
 
 dependencies {
+    api fileTree(dir: 'libs', include: ['*.aar'])
+
     implementation support.appcompat
     implementation 'com.tencent.tbs.tbssdk:sdk:43939'
     api "com.class100.atropos:atropos:0.0.6"
-    api "com.class100.hades:hades:0.0.5"
-    api "com.class100.khaos:khaos:0.0.4"
+    api("com.class100.hades:hades:0.0.5") {
+        exclude group: "org.conscrypt"
+    }
+    api "com.class100.khaos:khaos:0.0.5"
     api "com.class100.muses:muses:0.0.1"
-    api "com.class100.oceanides:oceanides:0.0.1"
-    api "com.class100.poseidon:poseidon:0.0.2"
+    api "com.class100.oceanides:oceanides:0.0.2"
+    api "com.class100.poseidon:poseidon:0.0.3"
     api 'com.squareup.okhttp3:okhttp:4.2.2'
     testImplementation test.junit
     androidTestImplementation test.andJunit

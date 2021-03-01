@@ -32,8 +32,8 @@ fun Context.isWifiConnected(): Boolean {
     }
 
     for (n in networks) {
-        if (connManager.getNetworkCapabilities(n).hasTransport(NetworkCapabilities.TRANSPORT_WIFI)
-            && connManager.getNetworkInfo(n).isConnected
+        if (connManager.getNetworkCapabilities(n)!!.hasTransport(NetworkCapabilities.TRANSPORT_WIFI)
+            && connManager.getNetworkInfo(n)!!.isConnected
         ) {
             return true
         }

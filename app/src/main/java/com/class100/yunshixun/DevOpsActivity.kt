@@ -3,9 +3,13 @@ package com.class100.yunshixun
 import android.content.Context
 import android.content.Intent
 import android.util.Log
+import android.widget.Toast
 import com.class100.atropos.env.context.AtPrefs
 import com.class100.hades.http.HaApiCallback
 import com.class100.hades.http.HaHttpClient
+import com.class100.khaos.KhAbsSdk
+import com.class100.khaos.KhSdkManager
+import com.class100.khaos.req.KhReqStartMeeting
 import com.class100.oceanides.OcActivity
 import com.class100.oceanides.camera.OcCameraActivity
 import com.class100.poseidon.PsWebActivity
@@ -51,5 +55,29 @@ class DevOpsActivity : OcActivity() {
                     }
                 })
         }
+
+        btn_start_meeting.setOnClickListener {
+            KhSdkManager.registerYsxSdk("13512345678")
+            KhSdkManager.getInstance().load(object : KhAbsSdk.OnSdkInitializeListener {
+                override fun onInitialized(sdk: KhAbsSdk) {
+                    val req = KhReqStartMeeting()
+                    req.topic = "Happy New Year"
+                    KhSdkManager.getInstance().sdk.startMeeting(this@DevOpsActivity, req)
+                }
+
+                override fun onError() {
+                    showToast("load Khaos sdk failed !")
+                }
+            })
+
+        }
+
     }
+
+    private fun showToast(text: CharSequence) {
+        runOnUiThread {
+            Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
+        }
+    }
+
 }

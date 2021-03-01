@@ -1,16 +1,16 @@
 ext.depends = [:]
 
 def artifact = [:]
-artifact.VName = "0.0.7"
-artifact.VCode = 000007
+artifact.VName = "0.0.9"
+artifact.VCode = 9
 
 def build = [:]
-build.compileSdkVersion = 28
+build.compileSdkVersion = 30
 build.minSdkVersion = 21
-build.targetSdkVersion = 28
+build.targetSdkVersion = 30
 
 def versions = [:]
-versions.support = "28.0.0"
+versions.support = "30.0.0"
 
 def support = [:]
 support.appcompat = "androidx.appcompat:appcompat:1.2.0"
