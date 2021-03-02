@@ -56,12 +56,10 @@ android {
 }
 
 dependencies {
-    api fileTree(dir: 'libs', include: ['*.aar'])
-
     implementation support.appcompat
     implementation 'com.tencent.tbs.tbssdk:sdk:43939'
     api "com.class100.atropos:atropos:0.0.6"
-    api("com.class100.hades:hades:0.0.5") {
+    api("com.class100.hades:hades:0.0.6") {
         exclude group: "org.conscrypt"
     }
     api "com.class100.khaos:khaos:0.0.5"
