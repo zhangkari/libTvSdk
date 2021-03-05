@@ -8,6 +8,7 @@ import com.class100.atropos.env.context.AtPrefs
 import com.class100.hades.http.HaApiCallback
 import com.class100.hades.http.HaHttpClient
 import com.class100.khaos.KhAbsSdk
+import com.class100.khaos.KhSdkAbility
 import com.class100.khaos.KhSdkManager
 import com.class100.khaos.req.KhReqStartMeeting
 import com.class100.oceanides.OcActivity
@@ -58,7 +59,7 @@ class DevOpsActivity : OcActivity() {
 
         btn_start_meeting.setOnClickListener {
             KhSdkManager.registerYsxSdk("13512345678")
-            KhSdkManager.getInstance().load(object : KhAbsSdk.OnSdkInitializeListener {
+            KhSdkManager.getInstance().load(object : KhSdkAbility.OnSdkInitializeListener {
                 override fun onInitialized(sdk: KhAbsSdk) {
                     val req = KhReqStartMeeting()
                     req.topic = "Happy New Year"
